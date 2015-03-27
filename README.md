@@ -1,0 +1,1 @@
+# fitrinator vimrc
