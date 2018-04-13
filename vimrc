@@ -1,5 +1,6 @@
 try
 	set runtimepath+=~/.vim-base1
+	set encoding=utf-8
 catch
 endtry
 
@@ -19,7 +20,6 @@ filetype indent on
 syntax enable
 
 colorscheme gruvbox
-set encoding=utf-8
 set background=dark
 set number
 set showcmd
@@ -79,8 +79,8 @@ autocmd BufRead,BufNewFile *.blade.php set filetype=html
 
 autocmd vimenter * NERDTree
 let g:NERDTreeWinPos = "left"
-let NERDTreeShowHidden=1
-let g:NERDTreeWinSize=20
+let NERDTreeShowHidden=0
+let g:NERDTreeWinSize=25
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
