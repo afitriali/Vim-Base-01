@@ -8,6 +8,8 @@ declare -a plugins=(
 'nginx.vim'
 'syntastic'
 'vim-airline'
+'vim-surround'
+'vim-yankstack'
 'YouCompleteMe'
 )
 
