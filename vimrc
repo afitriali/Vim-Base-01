@@ -19,7 +19,7 @@ filetype indent on
 syntax enable
 
 colorscheme gruvbox
-
+set encoding=utf-8
 set background=dark
 set number
 set showcmd
