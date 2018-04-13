@@ -1,3 +1,8 @@
+try
+	set runtimepath+=~/.vim-base1
+catch
+endtry
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " LOADS PLUGINS USING PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -55,7 +60,7 @@ map <leader>ss :setlocal spell!<cr>
 command W w !sudo tee % > /dev/null
 
 try
-    set undodir=~/.vim/temp/undodir
+    set undodir=~/.vim-base1/temp/undodir
     set undofile
 catch
 endtry

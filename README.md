@@ -2,5 +2,14 @@
 
 ## Installation
 
-1. Download files.
-2. Create symbolic link to .vim and .vimrc at your home directory.
+```
+cd ~
+git clone https://github.com/thefitriali/vim-base1.git ~/.vim-base1
+ln -s ~/.vim-base1/vimrc ~/.vimrc
+cd ~/.vim-base1
+git submodule init
+git submodule update
+```
+
+Additional configuration required:
+https://github.com/Valloric/YouCompleteMe
