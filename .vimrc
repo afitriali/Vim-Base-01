@@ -60,6 +60,8 @@ try
 catch
 endtry
 
+" TO-DO: Add auto-complete tags and brackets
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " SET FILETYPE FOR CUSTOM FILE EXTENSION
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,9 +73,9 @@ autocmd BufRead,BufNewFile *.blade.php set filetype=html
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd vimenter * NERDTree
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=1
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=20
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
