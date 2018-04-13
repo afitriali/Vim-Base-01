@@ -60,8 +60,8 @@ map <leader>ss :setlocal spell!<cr>
 command W w !sudo tee % > /dev/null
 
 try
-    set undodir=~/.vim-base1/temp/undodir
-    set undofile
+	set undodir=~/.vim-base1/temp/undodir
+	set undofile
 catch
 endtry
 

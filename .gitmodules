@@ -40,3 +40,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-signify"]
+	path = bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
