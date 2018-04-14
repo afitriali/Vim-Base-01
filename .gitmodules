@@ -7,9 +7,6 @@
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "bundle/html5.vim"]
-	path = bundle/html5.vim
-	url = https://github.com/othree/html5.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -46,24 +43,12 @@
 [submodule "bundle/MatchTagAlways"]
 	path = bundle/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
-[submodule "bundle/vim-web-indent"]
-	path = bundle/vim-web-indent
-	url = https://github.com/greatghoul/vim-web-indent.git
-[submodule "bundle/php.vim"]
-	path = bundle/php.vim
-	url = https://github.com/StanAngeloff/php.vim.git
-[submodule "bundle/vim-material-theme"]
-	path = bundle/vim-material-theme
-	url = https://github.com/jdkanani/vim-material-theme.git
 [submodule "bundle/vim-hardaway"]
 	path = bundle/vim-hardaway
 	url = https://github.com/evturn/vim-hardaway.git
 [submodule "bundle/bundle/dracula-theme"]
 	path = bundle/bundle/dracula-theme
 	url = git@github.com:dracula/vim.git
-[submodule "bundle/vim-css-color"]
-	path = bundle/vim-css-color
-	url = https://github.com/ap/vim-css-color.git
 [submodule "bundle/Zenburn"]
 	path = bundle/Zenburn
 	url = https://github.com/jnurmine/Zenburn.git
