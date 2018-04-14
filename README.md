@@ -1,6 +1,7 @@
 # Base 1 - A Personal Vim Setup
+Suitable for vim beginners and web developers. Gluten free.
+Overall, magical vim goodness without the bloat.
 
-I work with a lot of HTML/CSS/JS/PHP. This vim setup contain things like automatically detecting quirky filetype like 'blade.php' = 'html'. Also handles indenting for JS inside HTML and highlighting opening and closing tags. Overall, magical vim goodness without the bloat.
 
 ## Installation
 
