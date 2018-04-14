@@ -2,6 +2,10 @@
 Suitable for vim beginners and web developers. Gluten free.
 Overall, magical vim goodness without the bloat.
 
+Requires: Font with Powerline Glyphy/Symbol.
+
+Themes: Dracula, Gruvbox (default), Vimhardaway.
+Change using :colorscheme.
 
 ## Installation
 
