@@ -22,7 +22,7 @@ filetype plugin on
 filetype indent on
 syntax enable
 
-" available: dracula, gruvbox, vimhardaway
+" available: dracula, gruvbox, vimhardaway, zenburn
 colorscheme gruvbox
 set background=dark
 
@@ -97,6 +97,8 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 
 let g:ctrlp_map = '<c-p>'
