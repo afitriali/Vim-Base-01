@@ -1,8 +1,8 @@
 try
-	set runtimepath+=~/.vim-base1
+	set runtimepath+=~/.Vim-Base-01
 	set encoding=utf-8
-	set viewdir=~/.vim-base1/temp/viewdir
-	set undodir=~/.vim-base1/temp/undodir
+	set viewdir=~/.Vim-Base-01/temp/viewdir
+	set undodir=~/.Vim-Base-01/temp/undodir
 	set undofile
 catch
 endtry
