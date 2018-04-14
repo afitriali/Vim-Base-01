@@ -1,6 +1,6 @@
 # Base 1 - A Personal Vim Setup
 
-I work with a lot of HTML/CSS/JS/PHP. This vim setup contain things like automatically detecting quirky filetype like 'blade.php' = 'html'. Also handles indenting for JS inside HTML and highlighting opening and closing tags. Overall, magical vim goodness
+I work with a lot of HTML/CSS/JS/PHP. This vim setup contain things like automatically detecting quirky filetype like 'blade.php' = 'html'. Also handles indenting for JS inside HTML and highlighting opening and closing tags. Overall, magical vim goodness without the bloat.
 
 ## Installation
 
@@ -11,7 +11,6 @@ ln -s ~/.vim-base1/vimrc ~/.vimrc
 cd ~/.vim-base1
 git submodule init
 git submodule update
-mkdir temp & mkdir temp/undodir
 ```
 
 Additional configuration required:

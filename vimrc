@@ -1,6 +1,9 @@
 try
 	set runtimepath+=~/.vim-base1
 	set encoding=utf-8
+	set viewdir=~/.vim-base1/temp/viewdir
+	set undodir=~/.vim-base1/temp/undodir
+	set undofile
 catch
 endtry
 
@@ -58,20 +61,26 @@ map <right> <nop>
 nmap <silent> ,/ :nohlsearch<CR>
 map <leader>ss :setlocal spell!<cr>
 
+" Save as sudo using :W
 command W w !sudo tee % > /dev/null
 
-try
-	set undodir=~/.vim-base1/temp/undodir
-	set undofile
-catch
-endtry
+set foldmethod=indent   
+set foldnestmax=10
+set foldlevel=1
+set nofoldenable
 
-" TO-DO: Add auto-complete tags and brackets
+" Save All Folds to temp/viewdir
+augroup AutoSaveFolds
+	autocmd!
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " SET FILETYPE FOR CUSTOM FILE EXTENSION
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
+" Set filetype to HTML is extension is .blade.php
 autocmd BufRead,BufNewFile *.blade.php set filetype=html
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,12 +98,9 @@ map <leader>nf :NERDTreeFind<cr>
 let g:airline#extensions#hunks#enabled=1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
-let g:airline_left_sep='>'
-let g:airline_right_sep='<'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
-
