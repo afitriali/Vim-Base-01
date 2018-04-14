@@ -40,6 +40,7 @@ set nobackup
 set noswapfile
 set autoread
 set autowrite
+set autowriteall
 set pastetoggle=<F2>
 set wildignore+=*/vendor/**
 
