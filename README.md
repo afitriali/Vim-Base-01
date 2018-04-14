@@ -11,6 +11,7 @@ ln -s ~/.vim-base1/vimrc ~/.vimrc
 cd ~/.vim-base1
 git submodule init
 git submodule update
+mkdir temp && mkdir temp/undodir && mkdir temp/viewdir
 ```
 
 Additional configuration required:
@@ -21,5 +22,5 @@ https://github.com/Valloric/YouCompleteMe
 ```
 git pull
 git submodule init
-git update
+git submodule update
 ```
