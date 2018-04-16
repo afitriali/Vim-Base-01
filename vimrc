@@ -25,6 +25,7 @@ syntax enable
 " available: dracula, gruvbox, vimhardaway, zenburn
 colorscheme gruvbox
 set background=dark
+set t_Co=256
 
 set number relativenumber
 set showcmd
