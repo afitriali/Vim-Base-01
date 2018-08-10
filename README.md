@@ -11,11 +11,8 @@ Change using :colorscheme.
 
 ```
 cd ~
-git clone https://github.com/thefitriali/Vim-Base-01.git ~/.Vim-Base-01
+git clone --recurse-submodules -j8  https://github.com/thefitriali/Vim-Base-01.git ~/.Vim-Base-01
 ln -s ~/.Vim-Base-01/vimrc ~/.vimrc
-cd ~/.Vim-Base-01
-git submodule init
-git submodule update
 mkdir temp && mkdir temp/undodir && mkdir temp/viewdir
 ```
 
