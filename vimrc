@@ -31,8 +31,8 @@ set number relativenumber
 set showcmd
 set ruler
 set nowrap
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set autoindent
 set copyindent
 set smartindent
@@ -105,7 +105,13 @@ let g:airline_powerline_fonts = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+let g:ctrlp_custom_ignore = {
+			\ 'dir':'\v[\/](boostrap|config|node_modules|public|storage|vendor)'
+			\ }
+
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 let g:ycm_global_ycm_extra_conf = "~/.Vim-Bycm_extra_conf.py"
+
+let g:php_cs_fixer_rules = "@PSR2"   
