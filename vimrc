@@ -112,6 +112,6 @@ let g:ctrlp_custom_ignore = {
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
-let g:ycm_global_ycm_extra_conf = "~/.Vim-Bycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.Vim-Bycm_extra_conf.py"
 
 let g:php_cs_fixer_rules = "@PSR2"   
