@@ -1,9 +1,9 @@
 try
-	set runtimepath+=~/.Vim-Base-01
-	set encoding=utf-8
-	set viewdir=~/.Vim-Base-01/temp/viewdir
-	set undodir=~/.Vim-Base-01/temp/undodir
-	set undofile
+    set runtimepath+=~/.Vim-Base-01
+    set encoding=utf-8
+    set viewdir=~/.Vim-Base-01/temp/viewdir
+    set undodir=~/.Vim-Base-01/temp/undodir
+    set undofile
 catch
 endtry
 
@@ -15,6 +15,23 @@ call pathogen#infect()
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" LOADS PLUGINS USING PLUG
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin('~/.Vim-Base-01/plugged')
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+call plug#end()
+
+let g:python3_host_prog = "/usr/local/bin/python3"
+let g:deoplete#enable_at_startup = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -22,23 +39,25 @@ filetype plugin on
 filetype indent on
 syntax enable
 
-" available: dracula, gruvbox, vimhardaway, zenburn
+" available: gruvbox, vimhardaway, zenburn
 colorscheme gruvbox
 set background=dark
 set t_Co=256
+
+set backspace=indent,eol,start
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set autoindent
+set copyindent
+set smartindent
 
 set number relativenumber
 set showcmd
 set ruler
 set nowrap
-set tabstop=8
-set softtabstop=0
-set expandtab
-set shiftwidth=4
-set smarttab
-set autoindent
-set copyindent
-set smartindent
 set hlsearch
 set incsearch
 set ignorecase
@@ -77,9 +96,9 @@ set nofoldenable
 
 " Save All Folds to temp/viewdir
 augroup AutoSaveFolds
-	autocmd!
-	autocmd BufWinLeave *.* mkview
-	autocmd BufWinEnter *.* silent loadview
+    autocmd!
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent loadview
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,8 +106,8 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set filetype to HTML is extension is .blade.php
-autocmd BufRead,BufNewFile *.blade.php set filetype=html
-autocmd BufRead,BufNewFile *.vue set filetype=vue.html.javascript.css
+" autocmd BufRead,BufNewFile *.blade.php set filetype=ht
+" autocmd BufRead,BufNewFile *.vue set filetype=vue.html.javascript.css
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " CONFIGURE PLUGINS
@@ -110,8 +129,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:ctrlp_custom_ignore = {
-			\ 'dir':'\v[\/](boostrap|config|node_modules|public|storage|vendor)'
-			\ }
+            \ 'dir':'\v[\/](boostrap|config|node_modules|public|storage|vendor)'
+            \ }
 
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
