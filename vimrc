@@ -8,24 +8,24 @@ catch
 endtry
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" LOADS PLUGINS USING PATHOGEN
+" LOADS PLUGINS USING PATHOGEN AND PLUG
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-call pathogen#infect()
-call pathogen#helptags()
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" LOADS PLUGINS USING PLUG
-""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
 
 call plug#begin('~/.Vim-Base-01/plugged')
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+
+Plug 'kien/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Yggdroot/indentLine' 
+Plug 'sheerun/vim-polyglot' 
+Plug 'w0rp/ale'
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 call plug#end()
 
 let g:python3_host_prog = "/usr/local/bin/python3"
@@ -35,6 +35,7 @@ let g:deoplete#enable_at_startup = 1
 " VIM CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
+set backspace=indent,eol,start
 filetype plugin on
 filetype indent on
 syntax enable
@@ -44,8 +45,6 @@ colorscheme gruvbox
 set background=dark
 set t_Co=256
 
-set backspace=indent,eol,start
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -71,6 +70,9 @@ set autowrite
 set autowriteall
 set pastetoggle=<F2>
 set wildignore+=*/vendor/**
+
+set spell
+let g:PHP_outdentphpescape = 0
 
 nnoremap ; :
 nnoremap j gj

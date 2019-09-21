@@ -17,5 +17,9 @@ cd ~/.Vim-Base-01
 mkdir temp && mkdir temp/undodir && mkdir temp/viewdir
 ```
 
-Additional configuration required:
-https://github.com/Valloric/YouCompleteMe
+start vim and run
+```
+:PlugInstall
+```
+
+Restart vim.
