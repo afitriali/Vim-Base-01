@@ -31,8 +31,11 @@ set number relativenumber
 set showcmd
 set ruler
 set nowrap
-set tabstop=4
+set tabstop=8
+set softtabstop=0
+set expandtab
 set shiftwidth=4
+set smarttab
 set autoindent
 set copyindent
 set smartindent
@@ -85,6 +88,7 @@ augroup END
 
 " Set filetype to HTML is extension is .blade.php
 autocmd BufRead,BufNewFile *.blade.php set filetype=html
+autocmd BufRead,BufNewFile *.vue set filetype=vue.html.javascript.css
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " CONFIGURE PLUGINS
@@ -111,7 +115,5 @@ let g:ctrlp_custom_ignore = {
 
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
-
-" let g:ycm_global_ycm_extra_conf = "~/.Vim-Bycm_extra_conf.py"
 
 let g:php_cs_fixer_rules = "@PSR2"   
